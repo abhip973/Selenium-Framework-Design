@@ -1,5 +1,6 @@
 package abhishek_Learns;
 
+import abhishek_Learns.PageObjects.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -24,6 +25,7 @@ public class StandAloneTest {
 
         driver.manage().window().maximize();
 
+        LandingPage landingPage = new LandingPage(driver);
         //Declaring explicit wait
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
