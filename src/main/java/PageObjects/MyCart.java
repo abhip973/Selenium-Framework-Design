@@ -1,6 +1,6 @@
-package abhishek_Learns.PageObjects;
+package PageObjects;
 
-import abhishek_Learns.Utilities.Utility;
+import Utilities.Utility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

@@ -1,6 +1,6 @@
 package abhishek_Learns;
 
-import abhishek_Learns.PageObjects.LandingPage;
+import PageObjects.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
