@@ -1,40 +1,30 @@
 package abhishek_Learns;
 
-import abhishek_Learns.PageObjects.*;
+import PageObjects.*;
 
+import abhishek_Learns.TestComponents.BaseTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.time.Duration;
-import java.util.List;
 
 
-public class StandAloneTest1 {
+public class StandAloneTest1 extends BaseTest {
 
-    public static void main(String[] args) throws InterruptedException {
-
+    @Test
+    public void submitOrder() throws IOException, InterruptedException {
         String productName = "ZARA COAT 3";
         String confirmationMsg = "THANKYOU FOR THE ORDER.";
         String country = "India";
 
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
 
-        driver.manage().window().maximize();
-
-        LandingPage landingPage = new LandingPage(driver);
-
-
-        landingPage.goTo();
+        LandingPage landingPage = launchApplication();
         ProductCatalogue productCatalogue = landingPage.loginToApplication("punj.abhishek1@gmail.com", "Abhi@123");
 
-        //Applying implicit wait of 10 seconds
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         productCatalogue.getProductsList();
         productCatalogue.getProductByName(productName);

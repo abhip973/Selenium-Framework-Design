@@ -1,6 +1,6 @@
-package abhishek_Learns.Utilities;
+package Utilities;
 
-import abhishek_Learns.PageObjects.MyCart;
+import PageObjects.MyCart;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
