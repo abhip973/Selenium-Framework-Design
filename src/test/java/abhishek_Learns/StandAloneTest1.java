@@ -3,14 +3,10 @@ package abhishek_Learns;
 import PageObjects.*;
 
 import abhishek_Learns.TestComponents.BaseTest;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
-import java.time.Duration;
 
 
 public class StandAloneTest1 extends BaseTest {

@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b85c361a-8b2d-4003-b803-d760cbdb95d6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/abhishek_Learns/PageObjects/ConfirmationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ConfirmationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/abhishek_Learns/PageObjects/LandingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/LandingPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/abhishek_Learns/PageObjects/MyCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/MyCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/abhishek_Learns/PageObjects/PaymentGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/PaymentGateway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/abhishek_Learns/PageObjects/ProductCatalogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ProductCatalogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/abhishek_Learns/StandAloneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/abhishek_Learns/StandAloneTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/abhishek_Learns/StandAloneTest1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/abhishek_Learns/StandAloneTest1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/abhishek_Learns/Utilities/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/Utility.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
