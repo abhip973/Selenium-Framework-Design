@@ -40,4 +40,9 @@ public class Utility {
         MyCart myCart = new MyCart(driver);
         return myCart;
     }
+
+    public void scroll(String x, String y) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("scrollBy(200,300)");
+    }
 }

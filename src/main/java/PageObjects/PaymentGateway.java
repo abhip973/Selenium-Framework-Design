@@ -33,7 +33,8 @@ public class PaymentGateway extends Utility {
         countryOption.click();
     }
 
-    public ConfirmationPage placeOrder() {
+    public ConfirmationPage placeOrder() throws InterruptedException {
+        scroll("200", "300");
         placeOrderBtn.click();
         ConfirmationPage confirmationPage = new ConfirmationPage(driver);
         return confirmationPage;

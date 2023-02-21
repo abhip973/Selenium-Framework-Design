@@ -1,6 +1,7 @@
 package PageObjects;
 
 import Utilities.Utility;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -35,6 +36,9 @@ public class LandingPage extends Utility {
     @FindBy(css = "input#login")
     WebElement loginBtn;
 
+    @FindBy(css = "div[role='alertdialog']")
+    WebElement errorMsg;
+
     public ProductCatalogue loginToApplication(String email, String pwd) {
         userEmail.sendKeys(email);
         password.sendKeys(pwd);
@@ -45,6 +49,12 @@ public class LandingPage extends Utility {
 
     public void goTo() {
         driver.get("https://rahulshettyacademy.com/client");
+    }
+
+    public String getErrorMsg() {
+        waitForElementToAppear(By.cssSelector("div[role='alertdialog']"));
+        String errorMsgText = errorMsg.getText();
+        return errorMsgText;
     }
 
 
