@@ -18,7 +18,6 @@ public class StandAloneTest1 extends BaseTest {
         String country = "India";
 
 
-        LandingPage landingPage = launchApplication();
         ProductCatalogue productCatalogue = landingPage.loginToApplication("punj.abhishek1@gmail.com", "Abhi@123");
 
 
@@ -36,6 +35,5 @@ public class StandAloneTest1 extends BaseTest {
 
         String confirmationMsgText = confirmationPage.getConfirmationMsg();
         Assert.assertTrue(confirmationMsgText.equals(confirmationMsg));
-        driver.close();
     }
 }
