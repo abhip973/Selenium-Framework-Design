@@ -6,10 +6,15 @@ import org.testng.annotations.Test;
 
 public class ErrorValidations extends BaseTest {
 
-    @Test
-    public void invalidCredentials() {
+    @Test(groups = {"ErrorHandling"})
+    public void loginErrorValidations() {
         landingPage.loginToApplication("punj.abhi@gmail.com", "Abhi@1234");
         String errorMsgText = landingPage.getErrorMsg();
         Assert.assertEquals(errorMsgText, "Incorrect email or password.");
+    }
+
+
+    public void productErrorValidations() {
+
     }
 }

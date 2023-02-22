@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b85c361a-8b2d-4003-b803-d760cbdb95d6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/PaymentGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/PaymentGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/abhishek_Learns/ErrorValidations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/abhishek_Learns/ErrorValidations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/abhishek_Learns/StandAloneTest1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/abhishek_Learns/StandAloneTest1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/abhishek_Learns/TestComponents/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/abhishek_Learns/TestComponents/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,45 +43,55 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/punja/OneDrive/Documents/Selenium/Selenium-Framework-Design&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/abhishekp/Documents/Selenium Practise/Selenium-Framework-Design/testSuite&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\abhishekp\Documents\Selenium Practise\Selenium-Framework-Design\testSuite" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\abhishekp\Documents\Selenium Practise\Selenium-Framework-Design\testSuite" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="abhishek_Learns" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.StandAloneTest1">
-    <configuration name="StandAloneTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="abhishek_Learns.StandAloneTest" />
-      <module name="Selenium-Framework-Design" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="abhishek_Learns.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+  <component name="RunManager" selected="TestNG.C:/Users/abhishekp/Documents/Selenium Practise/Selenium-Framework-Design/testSuite/testng.xml">
+    <configuration name="C:/Users/abhishekp/Documents/Selenium Practise/Selenium-Framework-Design/testSuite/ErrorHandlingTests.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-framework-design" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testSuite/ErrorHandlingTests.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StandAloneTest1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="abhishek_Learns.StandAloneTest1" />
-      <module name="Selenium-Framework-Design" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="abhishek_Learns.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="C:/Users/abhishekp/Documents/Selenium Practise/Selenium-Framework-Design/testSuite/testng1.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-framework-design" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testSuite/testng1.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StandAloneTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="C:/Users/abhishekp/Documents/Selenium Practise/Selenium-Framework-Design/testSuite/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-framework-design" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testSuite/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ErrorValidations.loginErrorValidations" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium-framework-design" />
       <extension name="coverage">
         <pattern>
@@ -85,15 +100,16 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="abhishek_Learns" />
-      <option name="MAIN_CLASS_NAME" value="abhishek_Learns.StandAloneTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="abhishek_Learns.ErrorValidations" />
+      <option name="METHOD_NAME" value="loginErrorValidations" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StandAloneTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="StandAloneTest1.submitOrder" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium-framework-design" />
       <extension name="coverage">
         <pattern>
@@ -102,25 +118,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="abhishek_Learns" />
-      <option name="MAIN_CLASS_NAME" value="abhishek_Learns.StandAloneTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StandAloneTest1" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Selenium-Framework-Design" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="abhishek_Learns.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="abhishek_Learns" />
       <option name="MAIN_CLASS_NAME" value="abhishek_Learns.StandAloneTest1" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="submitOrder" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -129,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.StandAloneTest1" />
-        <item itemvalue="Application.StandAloneTest1" />
-        <item itemvalue="Application.StandAloneTest" />
-        <item itemvalue="TestNG.StandAloneTest (1)" />
-        <item itemvalue="TestNG.StandAloneTest" />
+        <item itemvalue="TestNG.C:/Users/abhishekp/Documents/Selenium Practise/Selenium-Framework-Design/testSuite/testng.xml" />
+        <item itemvalue="TestNG.C:/Users/abhishekp/Documents/Selenium Practise/Selenium-Framework-Design/testSuite/ErrorHandlingTests.xml" />
+        <item itemvalue="TestNG.C:/Users/abhishekp/Documents/Selenium Practise/Selenium-Framework-Design/testSuite/testng1.xml" />
+        <item itemvalue="TestNG.StandAloneTest1.submitOrder" />
+        <item itemvalue="TestNG.ErrorValidations.loginErrorValidations" />
       </list>
     </recent_temporary>
   </component>

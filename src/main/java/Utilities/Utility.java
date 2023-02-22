@@ -1,6 +1,7 @@
 package Utilities;
 
 import PageObjects.MyCart;
+import PageObjects.OrderPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -24,6 +25,9 @@ public class Utility {
     @FindBy(css = "button[routerLink*='cart']")
     WebElement cartBtn;
 
+    @FindBy(xpath = "//button[@routerLink = '/dashboard/myorders']")
+    WebElement orderHistoryLink;
+
     public void waitForElementToAppear(By findBy) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
@@ -41,8 +45,15 @@ public class Utility {
         return myCart;
     }
 
-    public void scroll(String x, String y) {
+    public void scroll() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("scrollBy(200,300)");
+        js.executeScript("scrollBy(1078,653)");
+    }
+
+    public OrderPage navigateToOrderHistory() {
+        orderHistoryLink.click();
+        OrderPage orderPage = new OrderPage(driver);
+        return orderPage;
+
     }
 }

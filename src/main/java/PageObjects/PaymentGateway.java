@@ -4,6 +4,7 @@ import Utilities.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -13,9 +14,9 @@ public class PaymentGateway extends Utility {
     WebElement countryPlaceholder;
     @FindBy(xpath = "//button[contains(@class,'ta-item')][2]")
     WebElement countryOption;
-    @FindBy(css = "[class*='action__submit']")
-    WebElement placeOrderBtn;
 
+        @FindBy(css = "[class*='action__submit'] i")
+        WebElement placeOrderBtn;
     By countryDropdown = By.cssSelector("[class*='ta-results list-group ng-star-inserted']");
 
     WebDriver driver;
@@ -34,8 +35,15 @@ public class PaymentGateway extends Utility {
     }
 
     public ConfirmationPage placeOrder() throws InterruptedException {
-        scroll("200", "300");
-        placeOrderBtn.click();
+        scroll();
+        Thread.sleep(2000);
+//        placeOrderBtn.click();
+        Actions a = new Actions(driver);
+        System.out.println(placeOrderBtn.getRect().x);
+        System.out.println(placeOrderBtn.getRect().y);
+        a.moveToElement(placeOrderBtn).click().build().perform();
+        a.moveToElement(placeOrderBtn).click().build().perform();
+
         ConfirmationPage confirmationPage = new ConfirmationPage(driver);
         return confirmationPage;
     }
