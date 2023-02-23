@@ -26,7 +26,7 @@ public class ProductCatalogue extends Utility {
 
 
     By productsListBy = By.xpath("//div[@class='card']/div/h5");
-    By addToCart = By.xpath("//../button[2]");
+    By addToCart = By.xpath(".//../button[2]");
     By confirmationToast = By.cssSelector("#toast-container");
     By loader = By.cssSelector(".ng-animating");
 
@@ -37,7 +37,7 @@ public class ProductCatalogue extends Utility {
     }
 
     public WebElement getProductByName(String productName) {
-        WebElement prod = getProductsList().stream().filter(product -> product.getText().contains(productName)).findFirst().orElse(null);
+        WebElement prod = getProductsList().stream().filter(product -> product.getText().equalsIgnoreCase(productName)).findFirst().orElse(null);
         return prod;
     }
 
