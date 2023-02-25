@@ -14,7 +14,4 @@ public class ErrorValidations extends BaseTest {
     }
 
 
-    public void productErrorValidations() {
-
-    }
 }
