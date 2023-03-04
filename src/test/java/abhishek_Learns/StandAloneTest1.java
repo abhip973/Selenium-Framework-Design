@@ -14,7 +14,7 @@ import java.util.List;
 
 public class StandAloneTest1 extends BaseTest {
     //    String productName = "ZARA COAT 3";
-    String productName;
+    public String productName;
 
     @Test(dataProvider = "getData")
     public void submitOrder(HashMap<String, String> map) throws IOException, InterruptedException {
