@@ -70,18 +70,19 @@ public class BaseTest {
         ObjectMapper objectMapper = new ObjectMapper();
 
         //readValue helps us to convert our string to List consisting of Hashmap values
-        List<HashMap<String,String>> data = objectMapper.readValue(jsonContent, new TypeReference<List<HashMap<String,String>>>(){});
+        List<HashMap<String, String>> data = objectMapper.readValue(jsonContent, new TypeReference<List<HashMap<String, String>>>() {
+        });
 
         return data;
     }
 
 
-    public File getScreenshot(String testCaseName) throws IOException {
-        TakesScreenshot screenshot = ((TakesScreenshot) driver);
+    public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {
+        TakesScreenshot screenshot = (TakesScreenshot) driver;
         File screenshotFile = screenshot.getScreenshotAs(OutputType.FILE);
-        File destinationFile = new File("src//Screenshots"+testCaseName+"png");
+        File destinationFile = new File(System.getProperty("user.dir") + "//reports//" + testCaseName + ".png");
 
-        FileUtils.copyFile(screenshotFile,destinationFile);
-        return destinationFile;
+        FileUtils.copyFile(screenshotFile, destinationFile);
+        return System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
     }
 }
