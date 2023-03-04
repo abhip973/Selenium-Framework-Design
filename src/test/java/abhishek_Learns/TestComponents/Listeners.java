@@ -15,23 +15,26 @@ import java.io.IOException;
 public class Listeners extends BaseTest implements ITestListener {
 
     ExtentTest test;
-    ExtentReports extent = ExtentReporterNG.getReportObject();;
+    ExtentReports extent = ExtentReporterNG.getReportObject();
+    ThreadLocal<ExtentTest> thread = new ThreadLocal<ExtentTest>();
 
     @Override
     public void onTestStart(ITestResult result) {
         test = extent.createTest(result.getMethod().getMethodName());
+        // This will create unique id for our ExtentTest thread,
+        thread.set(test);
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
         //This is not mandatory, the code will run fine without it also.
-        test.log(Status.PASS, "Test Passed");
+        thread.get().log(Status.PASS, "Test Passed");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
         //getThrowable() will give us the error log of the failed test.
-        test.fail(result.getThrowable());
+        thread.get().fail(result.getThrowable());
         String filePath = null;
         //Screenshot to attach to report
 
@@ -43,11 +46,11 @@ public class Listeners extends BaseTest implements ITestListener {
         }
 
         try {
-            filePath = getScreenshot(result.getMethod().getMethodName(),driver);
+            filePath = getScreenshot(result.getMethod().getMethodName(), driver);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        test.addScreenCaptureFromPath(filePath, result.getMethod().getMethodName());
+        thread.get().addScreenCaptureFromPath(filePath, result.getMethod().getMethodName());
     }
 
     @Override
