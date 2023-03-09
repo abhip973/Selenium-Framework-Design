@@ -5,10 +5,13 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -23,7 +26,7 @@ import java.util.Properties;
 public class BaseTest {
 
 
-    public WebDriver driver;
+    protected WebDriver driver;
     public LandingPage landingPage;
 
     public WebDriver initializeDriver() throws IOException {
@@ -33,12 +36,24 @@ public class BaseTest {
         FileInputStream globalFile = new FileInputStream("src/main/java/Resources/GlobalData/GlobalData.properties");
         properties.load(globalFile);
 
-        String browserName = properties.getProperty("browser");
+        String browserName = System.getProperty("browser") != null ? System.getProperty("browser") : properties.getProperty("browser");
 
 
-        if (browserName.equalsIgnoreCase("Chrome")) {
+        if (browserName.contains("chrome")) {
+            ChromeOptions options = new ChromeOptions();
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+            if(browserName.contains("headless")) {
+                options.addArguments("headless");
+            }
+            driver = new ChromeDriver(options);
+
+//            This step is needed in case of headless test as the screen may not maximize in headless mode.
+//            driver.manage().window().setSize(new Dimension(1440,900));
+
+        }
+        if(browserName.equalsIgnoreCase("Firefox")) {
+            WebDriverManager.firefoxdriver().setup();
+            driver = new FirefoxDriver();
         }
 
         driver.manage().window().maximize();
