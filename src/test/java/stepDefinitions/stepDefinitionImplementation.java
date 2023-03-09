@@ -51,4 +51,10 @@ public class stepDefinitionImplementation extends BaseTest {
         System.out.println(confirmationMsgText);
         Assert.assertTrue(confirmationMsgText.equals(message));
     }
+
+    @Then("^Verify error message is visible to the user$")
+    public void verify_error_message_is_visible_to_the_user() throws Throwable {
+        String errorMsgText = landingPage.getErrorMsg();
+        Assert.assertEquals(errorMsgText, "Incorrect email or password.");
+    }
 }
